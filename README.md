@@ -46,7 +46,7 @@ npm install
 ### Testing Locally
 Create `.env` file and add your Brian API Key
 ```shell
-cp .env.local .env
+cp .env.example .env
 ```
 
 In `.env` file replace `YOUR_BRIAN_KEY` with your API Key. Check the Brian API docs here https://docs.brianknows.org/brian-api-beta/apis/agent-apis
