@@ -10,11 +10,11 @@
     <a href="https://github.com/Phala-Network/ai-agent-template-brian"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="QmQu9AmBL13tyGpxgg5ASt96WQ669p63rnJRWiAo9st8ns/0?key=c0c0105ba56276cd&chatQuery=When%20did%20humans%20land%20on%20the%20moon">View Demo</a>
+    <a href="https://wapo-testnet.phala.network/ipfs/QmSwPTx5jTCQ1TMaSphk5a8wRxceHF3kw4yHQzXDhGxRW4?key=22e8955d1a347f8f&chatQuery=What%20is%20MEV">View Demo</a>
     ·
     <a href="https://github.com/Phala-Network/ai-agent-template-brian/issues">Report Bug</a>
     ·
-    <a href="https://discord.gg/DXGGJajW">Discord</a>
+    <a href="https://discord.gg/phala-network">Discord</a>
   </p>
 
   <h3>Architecure Overview</h3>
@@ -66,61 +66,19 @@ npm run test
 
 Expected Test Results
 ```shell
-
-INPUT: {"method":"GET","path":"/ipfs/QmVHbLYhhYA5z6yKpQr4JWr3D54EhbSsh7e7BFAAyrkkMf","queries":{"chatQuery":["What is Uniswap?"]},"secret":{"brianApiKey":"brian_xNVZeeA6mH1fuHIx1"},"headers":{}}
+INPUT: {"method":"GET","path":"/ipfs/CID","queries":{"chatQuery":["What is Uniswap?"]},"secret":{"brianApiKey":"BRIAN_API_KEY"},"headers":{}}
 GET RESULT: {
   status: 200,
-  body: '\n' +
-    '    <!DOCTYPE html>\n' +
-    '    <html lang="en">\n' +
-    '        <head>\n' +
-    '            <meta charset="utf-8" />\n' +
-    '            <title>AI Agent Contract Demo UI</title>\n' +
-    '        </head>\n' +
-    '        <body>\n' +
-    '            <div align="center">\n' +
-    '                <p>"Brian AI Agent Contract hosted on <a href="https://github.com/Phala-Network/ai-agent-template-brian">Phala Network</a>, an AI Coprocessor for hosting AI Agents."</p>\n' +
-    '                <img src="https://i.imgur.com/8B3igON.png" width="600" alt="AI Agent Contract" />\n' +
-    '                <p>"Overview:\n' +
-    'Uniswap is a decentralized finance (DeFi) protocol that allows users to swap various Ethereum-based tokens without the need for intermediaries or order books. It operates on the Ethereum blockchain and uses automated smart contracts to facilitate token exchanges.\n' +
-    '\n' +
-    'The Uniswap Protocol:\n' +
-    'At the core of Uniswap is an automated liquidity protocol that enables users to trade tokens directly from their wallets. Liquidity providers contribute tokens to various pools, which are then used to facilitate trades. These providers earn fees on trades executed through the protocol, proportional to their share of the liquidity pool.\n' +
-    '\n' +
-    'Swaps:\n' +
-    "The primary function of Uniswap is token swaps, where users can exchange one ERC-20 token for another directly on the platform. This process is fast, efficient, and does not require centralized exchanges or counterparties. Uniswap's automated market maker (AMM) system ensures that trades are always executed at fair market prices based on the available liquidity in the pool.\n" +
-    '\n' +
-    'Glossary:\n' +
-    "To better understand Uniswap and its features, it's helpful to familiarize yourself with some key terms commonly used in the protocol. Some important terms include liquidity provider, automated market maker (AMM), liquidity pool, slippage, and impermanent loss. Having a solid grasp of these concepts will enhance your ability to navigate and utilize Uniswap effectively.\n" +
-    '\n' +
-    'In conclusion, Uniswap is a groundbreaking DeFi protocol that has revolutionized the way users trade tokens on the Ethereum blockchain. By leveraging automated smart contracts and decentralized liquidity pools, Uniswap provides a seamless and efficient trading experience for users looking to swap tokens in a decentralized manner."</p>\n' +
-    '            </div>\n' +
-    '        </body>\n' +
-    '    </html>',
+  body: `{"input":"What is Uniswap?","answer":"Uniswap is a decentralized finance (DeFi) protocol that enables users to swap various cryptocurrencies on the Ethereum blockchain without the need for an intermediary. It operates using an automated market-making (AMM) model, which differs from traditional order book exchanges. Here’s a comprehensive overview broken down into key sections:\\n\\n \\n\\n**1. Core Functionality:**\\n\\nUniswap allows users to trade Ethereum-based tokens (ERC-20 tokens) seamlessly. The protocol employs liquidity pools where users provide tokens to facilitate swaps. In return, liquidity providers earn fees proportional to their contribution to the pool. The protocol is designed to function autonomously, with smart contracts managing trades and liquidity.\\n\\n \\n\\n**2. Automated Market Maker (AMM):**\\n\\nUnlike traditional exchanges that depend on buy and sell orders, Uniswap employs an AMM model. This model utilizes a mathematical formula (x * y = k) to determine prices, where x and y are quantities of tokens in the pool, and k is a constant. This design ensures that the price of tokens adjusts automatically based on supply and demand, incentivizing liquidity providers while allowing users to engage in seamless swaps.\\n\\n \\n\\n**3. Liquidity Pools:**\\n\\nLiquidity pools are essential components of Uniswap. Users can create or join pools by supplying an equal value of two different tokens. This supply grants users liquidity provider (LP) tokens, representing their share of the pool. LPs earn transaction fees generated from swaps, which accumulate over time. Additionally, LPs risk impermanent loss—fluctuations in token prices relative to each other—which should be considered when providing liquidity.\\n\\n \\n\\n**4. Governance:**\\n\\nUniswap operates under a decentralized governance model, allowing its community of token holders to participate in decision-making. Through the governance token (UNI), users can vote on proposals that affect the protocol, including changes to fee structures, new pools, or upgrades to the underlying smart contracts.\\n\\n \\n\\n**5. Versions:**\\n\\nUniswap has undergone several iterations, with Uniswap V2 and V3 being the most notable. \\n\\n- **Uniswap V2** introduced features like flash swaps, which enable users to borrow assets without collateral, provided they return the borrowed amount within a single transaction.\\n\\n- **Uniswap V3** further refined the AMM approach by enabling concentrated liquidity. This allows LPs to allocate their liquidity within specific price ranges, enhancing capital efficiency and potentially yielding higher fees. V3 also introduced mechanisms for customizable fees per pool.\\n\\n \\n\\n**6. Ecosystem and Integrations:**\\n\\nUniswap is a pivotal part of the DeFi ecosystem and integrates with various decentralized applications (dApps) and wallets. Its widespread use facilitates composability, where other DeFi projects can use Uniswap's liquidity for their protocols. Moreover, users can access Uniswap through multiple interfaces, including wallets like MetaMask and web-based aggregators.\\n\\n \\n\\nFor further information on Uniswap, you can refer to their official documentation:\\n- [The Uniswap Protocol](https://uniswap.org/docs/v2/protocol-overview/)\\n- [Swaps](https://uniswap.org/docs/v2/core-concepts/swaps/)\\n- [Glossary](https://uniswap.org/docs/v2/guides/glossary/)\\n\\n"}`,
   headers: {
-    'Content-Type': 'text/html; charset=UTF-8',
+    'Content-Type': 'application/json',
     'Access-Control-Allow-Origin': '*'
   }
 }
-INPUT: {"method":"POST","path":"/ipfs/QmVHbLYhhYA5z6yKpQr4JWr3D54EhbSsh7e7BFAAyrkkMf","queries":{"chatQuery":["What is Uniswap?"]},"secret":{"brianApiKey":"brian_xNVZeeA6mH1fuHIx1"},"headers":{},"body":"{\"untrustedData\":{\"fid\":2,\"url\":\"https://fcpolls.com/polls/1\",\"messageHash\":\"0xd2b1ddc6c88e865a33cb1a565e0058d757042974\",\"timestamp\":1706243218,\"network\":1,\"buttonIndex\":2,\"castId\":{\"fid\":226,\"hash\":\"0xa48dd46161d8e57725f5e26e34ec19c13ff7f3b9\"}},\"trustedData\":{\"messageBytes\":\"d2b1ddc6c88e865a33cb1a565e0058d757042974...\"}}"}
-POST RESULT: {
-  status: 200,
-  body: 'Not Implemented',
-  headers: {
-    'Content-Type': 'text/html; charset=UTF-8',
-    'Access-Control-Allow-Origin': '*'
-  }
-}
+**NOTE**:
+This is a local test and your published code could have a different result when executing in the TEE on Phala Network.
 
-To test in the SideVM playground go to https://phat.phala.network/contracts/view/0xf0a398600f02ea9b47a86c59aed61387e450e2a99cb8b921cd1d46f734e45409
-
-Connect you polkadot.js account and select 'run_js' with the parameters:
-- engine: SidevmQuickJSWithPolyfill
-- js_code: Source code text of dist/index.ts
-- args: {"method":"GET","path":"/ipfs/QmVHbLYhhYA5z6yKpQr4JWr3D54EhbSsh7e7BFAAyrkkMf","queries":{"chatQuery":["What is Uniswap?"]},"secret":{"brianApiKey":"BRIAN_API_KEY"},"headers":{}}
-Watch video here for to see the visual steps of testing in Sidevm playground: https://www.youtube.com/watch?v=fNqNeLfFFME
-
-Make sure to replace queries and secret with your values compatible with your AI Agent Contract.
+Please reach out to the team here if your run into issues: https://discord.gg/phala-network
 ```
 
 ### Publish Your AI Agent
@@ -131,11 +89,10 @@ npm run publish-agent
 
 Upon a successful upload, the command should show the URL to access your AI Agent.
 ```shell
-> phat-gpt-template@0.0.1 publish-agent
-> phat-fn build --experimentalAsync && tsx scripts/publish.ts
-
 ✓ Compiled successfully.
-  72.73 KB  dist/index.js
+  1.4 KB  dist/index.js
+Running command: npx thirdweb upload dist/index.js
+This may require you to log into thirdweb and will take some time to publish to IPFS...
 
     $$\     $$\       $$\                 $$\                         $$\       
     $$ |    $$ |      \__|                $$ |                        $$ |      
@@ -148,15 +105,20 @@ Upon a successful upload, the command should show the URL to access your AI Agen
 
  💎 thirdweb v0.14.12 💎
 
+- Checking for updates...
+
 - Uploading file to IPFS. This may take a while depending on file sizes.
 
 ✔ Successfully uploaded file to IPFS.
-✔ Files stored at the following IPFS URI: ipfs://QmayeZxHXwJxABXaNshP6j8uBE6RedkhmEgiaXd1w1Jib3
-✔ Open this link to view your upload: https://bafybeif3y2jpswse2n6s2cikwyjmbak4cxlpm6vrmgobqkgsmmn34l6m4i.ipfs.cf-ipfs.com/
+✔ Files stored at the following IPFS URI: ipfs://QmSwPTx5jTCQ1TMaSphk5a8wRxceHF3kw4yHQzXDhGxRW4
+✔ Open this link to view your upload: https://b805a9b72767504353244e0422c2b5f9.ipfscdn.io/ipfs/bafybeicektlospxpfnmytvnbpxtulsvhpszi3yipgwgvmo4vv47brqokpu/
 
-AI Agent Contract deployed at: https://agents.phala.network/ipfs/QmayeZxHXwJxABXaNshP6j8uBE6RedkhmEgiaXd1w1Jib3
+Agent Contract deployed at: https://wapo-testnet.phala.network/ipfs/QmSwPTx5jTCQ1TMaSphk5a8wRxceHF3kw4yHQzXDhGxRW4
 
-Make sure to add your secrets to ensure your AI-Agent works properly.
+If your agent requires secrets, ensure to do the following:
+1) Edit the setSecrets.ts file to add your secrets
+2) Set the variable AGENT_CID=QmSwPTx5jTCQ1TMaSphk5a8wRxceHF3kw4yHQzXDhGxRW4 in the .env file
+3) Run command: npm run set-secrets
 ```
 
 <details>
@@ -164,54 +126,60 @@ Make sure to add your secrets to ensure your AI-Agent works properly.
 We use <a href="https://thirdweb.com/dashboard/infrastructure/storage">thirdweb Storage</a> to host IPFS contents. If you are new to thirdweb, the command will guide you to create your account or login to your existing account from the browser. (You may need to forward port 8976 if you are accessing a remote console via SSH.)
 </details>
 
+<details>
+<summary>Did thirdweb fail to publish?</summary>
+If ThirdWeb fails to publish, please use any IPFS pinning service to publish your Agent Contract.
+</details>
+
 ### Access the Published AI Agent
 
-Once published, your AI Agent is available at the URL: `https://agents.phala.network/ipfs/<your-cid>`. You can get it from the "Publish to IPFS" step.
+Once published, your AI Agent is available at the URL: `https://wapo-testnet.phala.network/ipfs/<your-cid>`. You can get it from the "Publish to IPFS" step.
 
 You can test it with `curl`.
 
 ```bash
-curl https://agents.phala.network/ipfs/<your-cid>
+curl https://wapo-testnet.phala.network/ipfs/<your-cid>
 ```
 
 ### Add Secrets
 
 By default, all the compiled JS code is visible for anyone to view if they look at IPFS CID. This makes private info like API keys, signer keys, etc. vulnerable to be stolen. To protect devs from leaking keys, we have added a field called `secret` in the `Request` object. It allows you to store secrets in a vault for your AI Agent to access.
 
-<details>
-<summary><b>How to Add Secrets</b></summary>
-
-The steps to add a `secret` is simple. We will add the [Brian](https://www.brianknows.org/app/) API Key in this example by creating a secret JSON object with the `brianApiKey`:
-
-```json
-{"brianApiKey": "<BRIAN_API_KEY>"}
+To add your secrets,
+1) edit the [setSecrets.ts](./scripts/setSecrets.ts) file and update the `secrets` variable at the top of the file
+```typescript
+// Update your key value JSON object here for your secrets
+const secrets = JSON.stringify({
+  // Add your secrets here
+  // key: value
+  brianApiKey: process.env.BRIAN_API_KEY
+})
 ```
-
-Then in your frame code, you will be able to access the secret key via `req.secret` object:
-
-```js
-async function POST(req: Request): Promise<Response> {
-    const apiKey = req.secret?.apiKey
-}
+2) Update the [.env](./.env.example) file with your published agent IPFS CID
+```text
+AGENT_CID=QmSwPTx5jTCQ1TMaSphk5a8wRxceHF3kw4yHQzXDhGxRW4
 ```
-
-> **Note**: Before continuing, make sure to publish your compiled AI Agent JS code, so you can add secrets to the CID.
-
-**Open terminal**
-Use `curl` to `POST` your secrets to `https://agents.phala.network/vaults`. Replace `IPFS_CID` with the CID to the compile JS code in IPFS, and replace `<BRIAN_API_KEY>` with your Brian API key. Note that you can name the secret field name something other than `brianApiKey`, but you will need to access the key in your `index.ts` file with the syntax `req.secret?.<your-secret-field-name> as string`
-
-The command will look like this:
+3) Run command to set the secrets
 ```shell
-curl https://agents.phala.network/vaults -H 'Content-Type: application/json' -d '{"cid": "IPFS_CID", "data": {"brianApiKey": "<BRIAN_API_KEY>"}}'
-# Output:
-# {"token":"e85ae53d2ba4ca8d","key":"e781ef31210e0362","succeed":true}
+npm run set-secrets
+```
+Expected output:
+```shell
+Storing secrets...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   176    0    68  100   108     71    113 --:--:-- --:--:-- --:--:--   184
+{"token":"9fb0e1dd48c71ba1","key":"22e8955d1a347f8f","succeed":true}
+
+Secrets set successfully. Go to the URL below to interact with your agent:
+https://wapo-testnet.phala.network/ipfs/QmSwPTx5jTCQ1TMaSphk5a8wRxceHF3kw4yHQzXDhGxRW4?key=22e8955d1a347f8f
 ```
 
 The API returns a `token` and a `key`. The `key` is the id of your secret. It can be used to specify which secret you are going to pass to your frame. The `token` can be used by the developer to access the raw secret. You should never leak the `token`.
 
 To verify the secret, run the following command where `key` and `token` are replaced with the values from adding your `secret` to the vault.
 ```shell
-curl https://agents.phala.network/vaults/<key>/<token>
+curl https://wapo-testnet.phala.network/vaults/<key>/<token>
 ```
 
 Expected output:
@@ -219,23 +187,12 @@ Expected output:
 {"data":{"brianApiKey":"<BRIAN_API_KEY>"},"succeed":true}
 ```
 
-If you are using secrets, make sure that your URL is set in the following syntax where `cid` is the IPFS CID of your compiled JS file and `key` is the `key` from adding secrets to your vault.
-```text
-https://agents.phala.network/ipfs/<cid>?key=<key>
-```
-
-Example:
-https://agents.phala.network/ipfs/QmX5ofLpppdaFuuZx3LvGaAZAXz7zuD6gy5AuzE6cyoz4N?key=2e01c25ca431c806&chatQuery=What%20is%20Uniswap
-
-</details>
-
 ### Access Queries
 To help create custom logic, we have an array variable named `queries` that can be accessed in the `Request` class. To access the `queries` array variable `chatQuery` value at index `0`, the syntax will look as follows:
 ```typescript
 const query = req.queries.chatQuery[0] as string;
 ```
-The example at https://agents.phala.network/ipfs/QmX5ofLpppdaFuuZx3LvGaAZAXz7zuD6gy5AuzE6cyoz4N?key=2e01c25ca431c806&chatQuery=What%20is%20Uniswap will have a value of `When did humans land on the moon`. `queries` can have any field name, so `chatQuery` is just an example of a field name and not a mandatory name, but remember to update your `index.ts` file logic to use your expected field name.
-
+The example at https://wapo-testnet.phala.network/ipfs/QmSwPTx5jTCQ1TMaSphk5a8wRxceHF3kw4yHQzXDhGxRW4?key=22e8955d1a347f8f&chatQuery=What%20is%20MEV will have a value of `What is MEV?`. `queries` can have any field name, so `chatQuery` is just an example of a field name and not a mandatory name, but remember to update your `index.ts` file logic to use your expected field name.
 
 ## FAQ
 
@@ -245,8 +202,7 @@ The example at https://agents.phala.network/ipfs/QmX5ofLpppdaFuuZx3LvGaAZAXz7zuD
   <li>Most of the npm packages are supported: viem, onchainkit, ….</li>
   <li>Some packages with some advanced features are not supported:</li>
   <ul>
-    <li>Large code size. Compiled bundle should be less than 500kb.</li>
-    <li>Large memory usage, like image generation</li>
+    <li>Memory usage over 100MB</li>
     <li>Web Assembly</li>
     <li>Browser only features: local storage, service workers, etc</li>
   </ul>
@@ -258,13 +214,7 @@ The example at https://agents.phala.network/ipfs/QmX5ofLpppdaFuuZx3LvGaAZAXz7zuD
 <ul>
   <li>The code runs inside a tailored <a href="https://bellard.org/quickjs/">QuickJS engine</a></li>
   <li>Available features: ES2023, async, fetch, setTimeout, setInterval, bigint</li>
-  <li>Resource limits</li>
-  <ul>
-    <li>Max execution time ~60s</li>
-    <li>Max memory usage: 16 mb</li>
-    <li>Max code size: 500 kb</li>
-    <li>Limited CPU burst: CPU time between async calls is limited. e.g. Too complex for-loop may hit the burst limit.</li>
-  </ul>
+  <li> <a href="https://docs.phala.network/tech-specs/ai-agent-contract#wapojs/">Tech spec doc</a></li>
 </ul>
 </details>
 

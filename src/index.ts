@@ -1,31 +1,34 @@
 import { Request, Response, route } from './httpSupport'
-import { renderHtml } from './uiSupport'
 
 async function GET(req: Request): Promise<Response> {
-    const secret = req.queries?.key ?? '';
-    const brianApiKey = req.secret?.brianApiKey as string;
-    const query = (req.queries.chatQuery) ? req.queries.chatQuery[0] as string : 'What is Brian?';
-    let result;
+    const secrets = req.secret || {}
+    const queries = req.queries
+    const brianApiKey = (secrets.brianApiKey) ? secrets.brianApiKey as string : ''
+    const query = (queries.chatQuery) ? queries.chatQuery[0] as string : 'What is Brian?'
+    let result = {
+        input: query,
+        answer: ''
+    }
 
     try {
         const response = await fetch('https://api.brianknows.org/api/v0/agent/knowledge', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'X-Brian-Api-Key': `${brianApiKey}`
+                'x-brian-api-key': `${brianApiKey}`
             },
             body: JSON.stringify({
                 prompt: query,
             })
         });
         const responseData = await response.json();
-        result = responseData.result.text as string;
+        result.answer = (responseData.result.answer) ? responseData.result.answer as string : 'Failed to fetch answer';
     } catch (error) {
         console.error('Error fetching chat completion:', error);
-        result = error;
+        result.answer = error as string;
     }
 
-    return new Response(renderHtml(result as string))
+    return new Response(JSON.stringify(result))
 }
 
 async function POST(req: Request): Promise<Response> {
